@@ -1,15 +1,15 @@
 poddle:
   version: "1.0"
-  project: "vuka"
-  appName: "payment"
+  project: "instagram"
+  appName: "authentication-service"
   type: WEB_SERVICE
-  health: /api/v1/health
-  port: 8080
+  health: /health
+  port: 3000
   env:
     qa:
-      branch: main
-      entryPoint: "src/index.js"
-      domain: "api.poddleops.com"
+      branch: js-app/without-docker-with-db
+      entryPoint: "app.js"
+      domain: "auth-service-qa.poddleops.com"
       specs:
         compute:
           cpu: 2
@@ -21,9 +21,14 @@ poddle:
               max: 3
         database:
           cpu: 2
-          memory: 2
+          memory: 1
           storage: 50
-          engine: "postgres"
-          version: "16"
+          engine: "mysql"
+          version: "8.0.37"
       variables:
         BASE_URL: "/api/v1"
+        DATABASE_URL: "#{dbUrl}"
+        DATABASE_PORT: "#{dbPort}"
+        DATABASE_USERNAME: "#{dbUsername}"
+        DATABASE_PASSWORD: "#{dbPassword}"
+        DATABASE_NAME: "#{dbName}"
