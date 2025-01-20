@@ -35,7 +35,7 @@ const StartServer = () => __awaiter(void 0, void 0, void 0, function* () {
         try {
             console.log('DB Models available:', Object.keys(models_1.default));
             console.log('User model:', models_1.default.User);
-            const response = yield axios_1.default.post(process.env.THIRD_PARTY_URL, 'Hello World!', {
+            const response = yield axios_1.default.post(process.env.THIRD_PARTY_URL, 'Hello World! testing third party', {
                 headers: {
                     'Content-Type': 'text/plain'
                 }
