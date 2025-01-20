@@ -1,0 +1,24 @@
+{
+  "name": "nodejs-18-app",
+  "version": "1.0.0",
+  "description": "Sample Node JS app for testing poddle",
+  "main": "app.js",
+  "scripts": {
+    "start": "sequelize-cli db:migrate  --env production && node app.js",
+    "dev": "nodemon index.js",
+    "db:init": "sequelize-cli init",
+    "db:migrate": "sequelize-cli db:migrate ",
+    "db:migrate:generate-and-run": "sequelize-cli migration:generate --name auto-generated-migration && sequelize-cli db:migrate"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mysql2": "^3.12.0",
+    "sequelize": "^6.37.5",
+    "sequelize-cli": "^6.6.2"
+  }
+}
