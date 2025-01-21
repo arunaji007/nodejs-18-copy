@@ -9,6 +9,7 @@ const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'development';
 
 const config:any = dbConfig[env as keyof typeof dbConfig] 
+
 let sequelize: seq.Sequelize = new seq.Sequelize(config.database, config.username, config.password, config);
 
 const db:any = {};
