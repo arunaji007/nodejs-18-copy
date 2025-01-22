@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "app.js",
   "engines": {
-    "node": "18.x"
+    "node": "18.20.5"
   },
   "scripts": {
     "build": "tsc && tsc-alias && cp -r database/migrations build/database/ && ls && cp .sequelizerc build/",

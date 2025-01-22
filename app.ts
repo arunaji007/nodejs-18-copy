@@ -21,8 +21,9 @@ const StartServer = async () => {
         process.exit();
     })
     
-   
-    app.get("/users", async (req: Request, res: Response) => {
+    const baseUrl = process.env.BASE_URL;
+    
+    app.get(`${baseUrl}/users`, async (req: Request, res: Response) =>  {
         try {
             console.log('DB Models available:', Object.keys(db));
             console.log('User model:', db.User);
@@ -45,7 +46,7 @@ const StartServer = async () => {
         }
     });
 
-    app.post("/user", async (req: Request, res: Response) => {
+    app.post(`${baseUrl}/user`, async (req: Request, res: Response) => {
         try {
             const { name, email } = req.body;
             const newUser = await db.User.create({
