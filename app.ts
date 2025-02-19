@@ -13,7 +13,7 @@ const StartServer = async () => {
     }
     const app = express();
     app.use(express.json());
-
+    
     app.listen(process.env.PORT, () => {
         console.log(`Listening to port ${process.env.PORT}`);
     }).on('error', (err) => {
@@ -66,6 +66,9 @@ const StartServer = async () => {
         }
     });
 
+    app.get('/health', (req, res) => {
+        res.status(200).json({ status: 'OK' });
+    });
 
 }
 
