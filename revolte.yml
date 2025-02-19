@@ -7,7 +7,7 @@ revolte:
   port: 3000
   env:
     qa:
-      branch: js-app/without-docker-with-db
+      branch: ts-app/without-docker-with-db
       entryPoint: "app.js"
       domain: "auth-service-qa.poddleops.com"
       specs:
