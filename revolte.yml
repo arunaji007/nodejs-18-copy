@@ -4,7 +4,7 @@ revolte:
   appName: "authentication-service"
   type: WEB_SERVICE
   health: /health
-  port: 3000
+  port: 8000
   env:
     qa:
       branch: ts-app-without-docker-with-db
