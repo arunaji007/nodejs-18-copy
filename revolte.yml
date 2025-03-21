@@ -3,8 +3,7 @@ revolte:
   project: "instagram"
   appName: "subscription"
   env:
-    preview:
-      branch: dev
+    qa:
       services:
         rid_1:
           name: "auth-service"
