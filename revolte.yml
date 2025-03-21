@@ -1,30 +1,40 @@
 revolte:
   version: "1.0"
   project: "instagram"
-  appName: "authentication-service"
-  type: WEB_SERVICE
-  health: /health
-  port: 8000
+  appName: "subscription"
   env:
-    qa:
-      branch: ts-app-without-docker-with-db
-      entryPoint: "app.js"
-      specs:
-        compute:
-          cpu: 2
-          memory: 2
-          storage: 30
-        database:
-          cpu: 2
-          memory: 1
-          storage: 50
-          engine: "mysql"
-          version: "8.0.33"
-      variables:
-        BASE_URL: /api/v1
-        DATABASE_URL: "#{dbUrl}"
-        DATABASE_PORT: "#{dbPort}"
-        DATABASE_USERNAME: "#{dbUsername}"
-        DATABASE_PASSWORD: "#{dbPassword}"
-        DATABASE_NAME: users
-        THIRD_PARTY_URL: https://testt.requestcatcher.com/
+    preview:
+      branch: dev
+      services:
+        rid_1:
+          name: "auth-service"
+          type: "WEB_SERVICE"
+          entryPoint: "app.js"
+          specifications:
+            cpu: 2
+            memory: 2
+            storage: 30
+            autoScaling:
+              replica:
+                min: 1
+                max: 2
+          properties:
+            health: "/health"
+            port: 8080
+            variables:
+              BASE_URL: "#{base_Url}"
+              DATABASE_URL: "#{userDatabase.dbUrl}"
+              DATABASE_PORT: "#{userDatabase.dbPort}"
+              DATABASE_USERNAME: "#{userDatabase.dbUsername}"
+              DATABASE_PASSWORD: "#{userDatabase.dbPassword}"
+              DATABASE_NAME: "#{userDatabase.dbName}"
+              NODE_ENV: "production"
+              PORT: "8080"
+        rid_2:
+          name: "userDatabase"
+          type: "DATABASE"
+          specifications:
+            cpu: 2
+            memory: 1
+            storage: 50
+            engine: "mysql"
