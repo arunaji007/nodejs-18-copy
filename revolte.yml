@@ -4,6 +4,7 @@ revolte:
   appName: "subscription"
   env:
     qa:
+      branch: testing-services
       services:
         rid_1:
           name: "auth-service"
