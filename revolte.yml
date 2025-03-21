@@ -14,10 +14,6 @@ revolte:
             cpu: 2
             memory: 2
             storage: 30
-            autoScaling:
-              replica:
-                min: 1
-                max: 2
           properties:
             health: "/health"
             port: 8080
