@@ -3,7 +3,7 @@ revolte:
   project: "instagram"
   appName: "subscription"
   env:
-    qa:
+    staging:
       branch: testing-services
       services:
         rid_1:
