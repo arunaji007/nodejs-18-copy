@@ -1,7 +1,7 @@
 revolte:
   version: "1.0"
   project: "threads"
-  appName: "subscription"
+  appName: "subscriptions"
   env:
     staging:
       branch: testing-services
