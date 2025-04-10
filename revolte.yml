@@ -3,7 +3,7 @@ revolte:
   project: "threads"
   appName: "subscriptions"
   env:
-    staging:
+    qa:
       branch: testing-services
       services:
         rid_1:
