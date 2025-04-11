@@ -1,7 +1,7 @@
 revolte:
   version: "1.0"
-  project: "threads"
-  appName: "subscriptions"
+  project: "instagram"
+  appName: "qa"
   env:
     qa:
       branch: testing-services
