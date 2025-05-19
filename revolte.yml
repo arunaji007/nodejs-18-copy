@@ -3,7 +3,7 @@ revolte:
   project: "instagram"
   appName: "subscription"
   env:
-    staging:
+    qa:
       branch: testing-services
       services:
         rid_1:
@@ -16,7 +16,7 @@ revolte:
             storage: 30
           properties:
             health: "/health"
-            port: 8082
+            port: 8083
             variables:
               BASE_URL: "#{base_Url}"
               DBDIALECT: "postgres"
@@ -25,7 +25,7 @@ revolte:
               DATABASE_USERNAME: "#{userDatabase.dbUsername}"
               DATABASE_PASSWORD: "#{userDatabase.dbPassword}"
               DATABASE_NAME: "#{userDatabase.dbName}"
-              PORT: "8082"
+              PORT: "8083"
               JWT_SECRET_KEY: "YTI4OTYyZmQ2MjYxZDI2ZWYzMWI0MjM1Y2I0MmYxMGZmMGZkOGEwNg=="
               GEOSERVER_USERNAME: "admin"
               GEOSERVER_PASSWORD: "geoserver"
