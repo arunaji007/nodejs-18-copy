@@ -16,7 +16,7 @@ revolte:
             storage: 30
           properties:
             health: "/health"
-            port: 8083
+            port: 8080
             variables:
               BASE_URL: "#{base_Url}"
               DBDIALECT: "postgres"
@@ -25,7 +25,7 @@ revolte:
               DATABASE_USERNAME: "#{userDatabase.dbUsername}"
               DATABASE_PASSWORD: "#{userDatabase.dbPassword}"
               DATABASE_NAME: "#{userDatabase.dbName}"
-              PORT: "8083"
+              PORT: "8080"
               JWT_SECRET_KEY: "YTI4OTYyZmQ2MjYxZDI2ZWYzMWI0MjM1Y2I0MmYxMGZmMGZkOGEwNg=="
               GEOSERVER_USERNAME: "admin"
               GEOSERVER_PASSWORD: "geoserver"
