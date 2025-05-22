@@ -7,7 +7,7 @@
   },
   "scripts": {
     "build": "tsc && tsc-alias && cp -r database/migrations build/database/ && ls && cp .sequelizerc build/",
-    "start": "npm run migration && node app.js",
+    "start": "node app.js",
     "migration": "npx sequelize-cli db:migrate --env=production",
     "undo:migration": "npx sequelize-cli db:migrate:undo --env=production",
     "create:migration": "npx sequelize-cli migration:generate --name auto-generated-migration --env=production",
