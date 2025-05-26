@@ -19,6 +19,8 @@ revolte:
             port: 8080
             preScript:
                       - npm run migration
+            postScript:
+                      - npm run migration
             variables:
               BASE_URL: "#{base_Url}"
               DBDIALECT: "postgres"
