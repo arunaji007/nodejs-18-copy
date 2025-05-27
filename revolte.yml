@@ -18,7 +18,7 @@ revolte:
             health: "/health"
             port: 8080
             preScript:
-                      - npm run migratee
+                      - npm run migrate
             variables:
               BASE_URL: "#{base_Url}"
               DBDIALECT: "postgres"
