@@ -11,8 +11,8 @@ revolte:
           type: "WEB_SERVICE"
           entryPoint: "app.ts"
           specifications:
-            cpu: 2
-            memory: 2
+            cpu: 1
+            memory: 1
             storage: 30
           properties:
             health: "/health"
