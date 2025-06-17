@@ -28,16 +28,6 @@ revolte:
               DATABASE_PASSWORD: "#{userDatabase.dbPassword}"
               DATABASE_NAME: "#{userDatabase.dbName}"
               PORT: "8080"
-              JWT_SECRET_KEY: "YTI4OTYyZmQ2MjYxZDI2ZWYzMWI0MjM1Y2I0MmYxMGZmMGZkOGEwNg=="
-              GEOSERVER_USERNAME: "admin"
-              GEOSERVER_PASSWORD: "geoserver"
-              GEOSERVER_HOST: "http://localhost:8080"
-              AWS_SECRET_ACCESS_KEY: "test"
-              AWS_REGION: "us-east-1"
-              S3_WORK_ORDER_BUCKET_NAME: "mapaki-workorder-attachments"
-              S3_MAP_PORTAL_BUCKET_NAME: "map-portal-attachments"
-              S3_BUCKET_REGION: "ca-central-1"
-              NODE_ENV: "production"
         rid_2:
           name: "userDatabase"
           type: "DATABASE"
@@ -46,3 +36,42 @@ revolte:
             memory: 1
             storage: 50
             engine: "mysql"
+  production:
+      branch: "testing-services"
+      services:
+        rid_1:
+          name: "auth-service"
+          type: "WEB_SERVICE"
+          entryPoint: "app.ts"
+          domain: api-test-prod.poddleopss.com
+          specifications:
+            cpu: 2
+            memory: 2
+            storage: 30
+            autoScaling:
+              replica:
+                min: 1
+                max: 3
+          properties:
+            health: "/health"
+            port: 8080
+            preScript:
+                      - npm run migration
+            variables:
+              BASE_URL: "#{base_Url}"
+              DBDIALECT: "postgres"
+              DATABASE_URL: "#{userDatabase.dbUrl}"
+              DATABASE_PORT: "#{userDatabase.dbPort}"
+              DATABASE_USERNAME: "#{userDatabase.dbUsername}"
+              DATABASE_PASSWORD: "#{userDatabase.dbPassword}"
+              DATABASE_NAME: "#{userDatabase.dbName}"
+              PORT: "8080"
+        rid_2:
+          name: "userDatabase"
+          type: "DATABASE"
+          specifications:
+            cpu: 2
+            memory: 1
+            storage: 50
+            engine: "mysql"
+
