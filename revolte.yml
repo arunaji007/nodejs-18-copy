@@ -43,10 +43,10 @@ revolte:
             name: "auth-service"
             type: "WEB_SERVICE"
             entryPoint: "app.ts"
-            domain: api-test-prod.poddleopss.com
+            domain: api-test-prod.poddleops.com
             specifications:
-              cpu: 2
-              memory: 2
+              cpu: 1
+              memory: 1
               storage: 30
               autoScaling:
                 replica:
