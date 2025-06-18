@@ -15,7 +15,7 @@ const StartServer = async () => {
     app.use(express.json());
     
     app.listen(process.env.PORT, () => {
-        console.log(`Listening to port ${process.env.PORT}`);
+        console.log(`Listenings to port ${process.env.PORT}`);
     }).on('error', (err) => {
         console.log('Error is', err);
         process.exit();
