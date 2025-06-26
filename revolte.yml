@@ -15,7 +15,7 @@ revolte:
             memory: 1
             storage: 30
           properties:
-            health: "/health"
+            health: "/healths"
             port: 8080
             preScript:
                       - npm run migration
