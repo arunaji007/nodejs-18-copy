@@ -32,9 +32,6 @@ revolte:
           name: "userDatabase"
           type: "DATABASE"
           specifications:
-            cpu: 2
-            memory: 1
-            storage: 50
             engine: "mysql"
     production:
         branch: "testing-services"
@@ -70,8 +67,5 @@ revolte:
             name: "userDatabase"
             type: "DATABASE"
             specifications:
-              cpu: 2
-              memory: 1
-              storage: 50
               engine: "mysql"
   
