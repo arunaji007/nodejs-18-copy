@@ -6,7 +6,9 @@ import axios from 'axios';
 
 const StartServer = async () => {
     try {
-        await db.sequelize.authenticate();
+        await db.sequelize.authenticate().then(() => {
+    throw new Error("Simulated DB failure");
+});
         console.log('Database connection has been established successfully.');
     } catch (error) {
         console.error('Unable to connect to the database:', error);
