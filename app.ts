@@ -6,13 +6,16 @@ import axios from 'axios';
 
 const StartServer = async () => {
     try {
-        await db.sequelize.authenticate().then(() => {
-    throw new Error("Simulated DB failure");
-});
+        await db.sequelize.authenticate();
         console.log('Database connection has been established successfully.');
     } catch (error) {
         console.error('Unable to connect to the database:', error);
     }
+    if (1) {
+      console.error('Fatal error occurred');
+      process.exit(1);
+    }
+
     const app = express();
     app.use(express.json());
     
