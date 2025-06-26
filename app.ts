@@ -12,9 +12,9 @@ const StartServer = async () => {
         console.error('Unable to connect to the database:', error);
     }
     const app = express();
-    app.user(express.json());
+    app.use(express.json());
     
-    app.listenr(process.env.PORT, () => {
+    app.listen(process.env.PORT, () => {
         console.log(`Listenings to port ${process.env.PORT}`);
     }).on('error', (err) => {
         console.log('Error is', err);
