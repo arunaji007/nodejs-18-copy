@@ -15,7 +15,7 @@ revolte:
             memory: 1
             storage: 30
           properties:
-            health: "/healths"
+            health: "/health"
             port: 8080
             variables:
               BASE_URL: "#{base_Url}"
