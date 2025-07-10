@@ -31,6 +31,9 @@ revolte:
           type: "DATABASE"
           specifications:
             engine: "mysql"
+            cpu: 2
+            memory: 1
+            storage: 20
     production:
         branch: "testing-services"
         services:
@@ -63,4 +66,8 @@ revolte:
             type: "DATABASE"
             specifications:
               engine: "mysql"
+              cpu: 2
+              memory: 1
+              storage: 20
+                
   
