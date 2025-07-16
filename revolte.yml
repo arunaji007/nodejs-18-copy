@@ -18,7 +18,6 @@ revolte:
             health: "/health"
             port: 8080
             variables:
-              BASE_URL: "#{base_Url}"
               DBDIALECT: "postgres"
               DATABASE_URL: "#{userDatabase.dbUrl}"
               DATABASE_PORT: "#{userDatabase.dbPort}"
@@ -53,7 +52,6 @@ revolte:
               health: "/health"
               port: 8080
               variables:
-                BASE_URL: "#{base_Url}"
                 DBDIALECT: "postgres"
                 DATABASE_URL: "#{userDatabase.dbUrl}"
                 DATABASE_PORT: "#{userDatabase.dbPort}"
