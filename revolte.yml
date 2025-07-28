@@ -12,7 +12,7 @@ revolte:
           entryPoint: "app.ts"
           specifications:
             cpu: 2
-            memory: 2
+            memory: 8
             storage: 30
           properties:
             health: "/health"
