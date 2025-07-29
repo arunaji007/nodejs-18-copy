@@ -1,24 +1,24 @@
-'use strict';
-import fs from 'fs';
-import path from 'path';
-import * as seq from 'sequelize';
-import process from 'process';
-import dbConfig from '../../configuration/db.config';
-import { initUser } from './user';
-const basename = path.basename(__filename);
-const env = process.env.NODE_ENV || 'development';
+// 'use strict';
+// import fs from 'fs';
+// import path from 'path';
+// import * as seq from 'sequelize';
+// import process from 'process';
+// import dbConfig from '../../configuration/db.config';
+// import { initUser } from './user';
+// const basename = path.basename(__filename);
+// const env = process.env.NODE_ENV || 'development';
 
-const config:any = dbConfig[env as keyof typeof dbConfig] 
+// const config:any = dbConfig[env as keyof typeof dbConfig] 
 
-let sequelize: seq.Sequelize = new seq.Sequelize(config.database, config.username, config.password, config);
+// let sequelize: seq.Sequelize = new seq.Sequelize(config.database, config.username, config.password, config);
 
-const db:any = {};
+// const db:any = {};
 
-// Initialize models
-db.User = initUser(sequelize);
+// // Initialize models
+// db.User = initUser(sequelize);
 
-// Add sequelize instances
-db.sequelize = sequelize;
-db.Sequelize = seq.Sequelize;
+// // Add sequelize instances
+// db.sequelize = sequelize;
+// db.Sequelize = seq.Sequelize;
 
-export default db;
+// export default db;
