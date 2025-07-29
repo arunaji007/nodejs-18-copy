@@ -18,8 +18,8 @@ const StartServer = async () => {
     const app = express();
     app.use(express.json());
     
-    app.listen(process.env.PORT, () => {
-        console.log(`Listenings to port ${process.env.PORT}`);
+    app.listen(8000, () => {
+        console.log(`Listenings to port ${8000}`);
     }).on('error', (err) => {
         console.log('Error is', err);
         process.exit();
