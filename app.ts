@@ -1,16 +1,16 @@
 import  express from 'express';
-import db from './database/models';
+// import db from './database/models';
 import { Server } from 'http';
 import { Request, Response } from 'express';
 import axios from 'axios';
 
 const StartServer = async () => {
-    try {
-        await db.sequelize.authenticate();
-        console.log('Database connection has been established successfully.');
-    } catch (error) {
-        console.error('Unable to connect to the database:', error);
-    }
+    // try {
+    //     await db.sequelize.authenticate();
+    //     console.log('Database connection has been established successfully.');
+    // } catch (error) {
+    //     console.error('Unable to connect to the database:', error);
+    // }
 
     //console.error('Fatal error occurred');
   // process.exit(1);
