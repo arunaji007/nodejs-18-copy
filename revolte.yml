@@ -3,20 +3,6 @@ revolte:
   project: "instagram"
   appName: "subscription"
   env:
-     qa:
-      branch: "testing-services"
-      services:
-        rid_1:
-          name: "auth-service"
-          type: "WEB_SERVICE"
-          entryPoint: "app.ts"
-          specifications:
-            cpu: 2
-            memory: 2
-            storage: 30
-          properties:
-            health: "/health"
-            port: 8080
     staging:
       branch: "testing-services"
       services:
