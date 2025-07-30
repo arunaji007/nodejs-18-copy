@@ -18,7 +18,7 @@ const StartServer = async () => {
     const app = express();
     app.use(express.json());
     
-    app.listen(8000, () => {
+    app.listen(8080, () => {
         console.log(`Listenings to port ${8000}`);
     }).on('error', (err) => {
         console.log('Error is', err);
