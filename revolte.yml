@@ -3,7 +3,7 @@ revolte:
   project: "instagram"
   appName: "subscription"
   env:
-    qa:
+    staging:
       branch: "testing-services"
       services:
         rid_1:
@@ -12,7 +12,7 @@ revolte:
           entryPoint: "app.ts"
           specifications:
             cpu: 2
-            memory: 4
+            memory: 2
             storage: 30
           properties:
             health: "/health"
