@@ -12,8 +12,8 @@ const StartServer = async () => {
     //     console.error('Unable to connect to the database:', error);
     // }
 
-    //console.error('Fatal error occurred');
-  // process.exit(1);
+    console.error('Fatal error occurred');
+    process.exit(1);
 
     const app = express();
     app.use(express.json());
