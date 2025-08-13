@@ -70,7 +70,7 @@ const StartServer = async () => {
     //     }
     // });
 
-    app.get('/health', (req, res) => {
+    app.get('/healths', (req, res) => {
         res.status(200).json({ status: 'OK check tests' });
     });
 
