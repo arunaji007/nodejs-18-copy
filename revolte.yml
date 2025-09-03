@@ -2,12 +2,13 @@ revolte:
   version: "1.0"
   project: "instagram"
   appName: "subscription"
-  codeQuality:
-    codeStyle:
-      rules:
-        "javascript/arrayCallbackReturn": off
-        "javascript/constructorSuper": error
-        "typescript/forDirection": warn
+  config:
+    codeQuality:
+      codeStyle:
+        rules:
+          "javascript/arrayCallbackReturn": off
+          "javascript/constructorSuper": error
+          "typescript/forDirection": warn
   env:
     qa:
       codeQuality: true
