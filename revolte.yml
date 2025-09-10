@@ -1,7 +1,7 @@
 revolte:
   version: "1.0"
-  project: "New project"
-  appName: "New application"
+  project: "New Project"
+  appName: "New Application"
   config:
     codeQuality:
       codeStyle:
