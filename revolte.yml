@@ -1,7 +1,7 @@
 revolte:
   version: "1.0"
-  project: "instagram"
-  appName: "subscription"
+  project: "New project"
+  appName: "New application"
   config:
     codeQuality:
       codeStyle:
