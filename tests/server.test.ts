@@ -10,7 +10,7 @@ beforeAll(async () => {
   app = express();
   app.use(express.json());
   app.get('/health', (req, res) => {
-    res.status(200).json({ status: 'OK check tests' });
+    res.status(200).json({ status: 'OK check test' });
   });
 
   server = app.listen(0); // random available port
