@@ -1,17 +1,19 @@
 revolte:
   version: "1.0"
-  project: "New Project"
-  appName: "New Application"
-  config:
-    codeQuality:
-      codeStyle:
-        rules:
-          "javascript/arrayCallbackReturn": off
-          "javascript/constructorSuper": error
-          "typescript/forDirection": warn
+  project: "instagram"
+  appName: "subscription"
+  codeQuality:
+    codeStyle:
+      rules:
+        "javascript/arrayCallbackReturn": off
+        "javascript/constructorSuper": error
+        "typescript/forDirection": warn
+  testSuite:
+    command: "npm run test"
   env:
     qa:
       codeQuality: true
+      testSuite: true
       branch: "testing-pipeline"
       services:
         rid_1:
