@@ -10,7 +10,6 @@ revolte:
           "javascript/constructorSuper": error
           "typescript/forDirection": warn
     testSuite:
-      command: 
   env:
     qa:
       codeQuality: true
