@@ -14,7 +14,7 @@ const StartServer = async () => {
 
   // console.error('Fatal error occurred');
   // process.exit(1);
-  console.log('tesss')
+  console.log('tessss')
   const app = express();
   app.use(express.json());
 
