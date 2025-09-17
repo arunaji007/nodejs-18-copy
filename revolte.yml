@@ -5,7 +5,6 @@ revolte:
   config:
     codeQuality:
       codeStyle:
-        rules:
     testSuite:
           command: "npm run test"
   env:
