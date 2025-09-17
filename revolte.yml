@@ -6,9 +6,6 @@ revolte:
     codeQuality:
       codeStyle:
         rules:
-          "javascript/arrayCallbackReturn": off
-          "javascript/constructorSuper": error
-          "typescript/forDirection": warn
     testSuite:
           command: "npm run test"
   env:
