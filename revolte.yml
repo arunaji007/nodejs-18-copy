@@ -15,7 +15,6 @@ revolte:
     preview:
       codeQuality: true
       testSuite: true
-      branch: "testing-pipeline"
       services:
         rid_1:
           name: "auth-service"
