@@ -12,7 +12,7 @@ revolte:
     testSuite:
           command: "npm run test"
   env:
-    qa:
+    preview:
       codeQuality: true
       testSuite: true
       branch: "testing-pipeline"
