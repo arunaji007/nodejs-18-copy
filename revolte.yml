@@ -1,7 +1,7 @@
 revolte:
   version: "1.0"
-  project: "instagram"
-  appName: "subscription"
+  project: "Swimlab"
+  appName: "swimlab-api-service"
   env:
     qa:
       branch: "testing-services"
