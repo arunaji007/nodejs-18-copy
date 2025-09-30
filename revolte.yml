@@ -1,7 +1,7 @@
 revolte:
   version: "1.0"
   project: "Swimlab"
-  appName: "swimlab-api-service"
+  appName: "swimlab-api"
   env:
     qa:
       branch: "testing-services"
